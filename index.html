@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- VUE Js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Toboolist</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="logo">
+        <img src="./img/logo.png" alt="logo Tobolist">
+    </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <main>
+        <div id="app">
+            <div class="contenitore">
+                <!-- barra di ricerca -->
+                <div>
+                    <!-- //trim toglie gli spazi all'inizio e alla fine -->
+                    <input class="barra" type="text" v-model.trim="newTodo.text" @keyup.enter="addTodo"
+                        placeholder="es: Fare la spesa...">
+                    <button class="bottone" @click="addTodo">Aggiungi</button>
+                </div>
+                
+                <hr>
+                <!-- inserimento lista -->
+                <div>
+                    <ol>
+                        <li>
+                            <!-- <h4>&#10148; TASK PRECEDENTI</h4> -->
+                            <ul>
+                                <li v-for="(curTodo, index) in todoList">
+                                    <!-- <span class="cerchio">&check;</span>  -->
+                                    <span @click="inverDone(index)" :class="{'textline' : curTodo.done}">{{curTodo.text}}</span>
+                                    <span class="cross" @click="removeTodo(index)">&Cross;</span>
+                                    <!-- <span class="tag decorazione-e">Editorial</span> -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

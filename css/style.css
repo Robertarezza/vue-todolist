@@ -1,0 +1,148 @@
+/* RESET */
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+/* common (cose in comune) */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+.logo{
+    background-color: #edf2f7;
+    text-align: center;
+    box-shadow: 10px 10px 5px #dedede;
+    padding: 10px 0;
+}
+
+/* main */
+.contenitore{
+    width: 80%;
+    background-color: #edf2f7;
+    margin: 40px auto;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 10px 10px 5px #dedede;
+}
+
+hr{
+    border: 2px solid white;
+}
+
+/* lista */
+.barra,.bottone{
+    padding: 2px 5px;
+    border-radius: 2px;
+    border: 0;
+}
+
+.barra{
+    margin:20px 0;  
+    
+}
+.bottone{
+    background-color: #14aaf5;
+    color: white;
+}
+
+ol{
+    padding: 25px 0;
+}
+ol,ul{
+    text-align: left;
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.textline {
+    position: relative; 
+}
+
+.textline::before {
+    content: "✔";
+    color: green;
+    font-size: 20px;
+    position: absolute; 
+    left: -25px; 
+    bottom: 1px;
+}
+
+.textline {
+    text-decoration: line-through; /* Barratura del testo */
+}
+.top .error {
+    color: red;
+}
+
+ol>li{
+    margin-bottom: 15px;
+}
+
+li>h4{
+    margin-bottom: 12px;
+}
+ul>li{
+    background-color: white;
+    border-radius: 10px;
+    width: 95%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tag{
+    /* text-decoration: line-through black; */
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: white;
+    display: inline-block;
+}
+.decorazione-e{
+    background-color: #14aaf5;
+}
+
+.q1{
+    background-color: violet;
+}
+
+.rec{
+    background-color: 	#0efdc8;
+}
+
+.mobile{
+    background-color: orange;
+}
+.web{
+    background-color: rgb(221, 65, 65);
+} 
+
+.sales{
+    background-color: green;
+}
+
+/* formattazione simbolo */
+
+.cross, .cerchio{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+}
+.cerchio{
+    color: green;
+    border: 2px solid green;
+}
+
+.cross{
+    color: gray;
+    cursor: pointer;
+    /* border: 2px solid red;   */
+}
